@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+
+}
+
+li {
+    color: white;
+}
+.scroll-list {
+    height: 70vh;       /* Fixed height is required */
+    overflow-y: auto;    /* Show scrollbar only if content exceeds height */
+    border: 1px solid #ccc;
+}
+
