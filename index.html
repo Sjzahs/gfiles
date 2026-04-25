@@ -6,15 +6,21 @@
     <title>GFiles</title>
 </head>
 <body>
-    <ul class="scroll-list">
-        <li>alien hominid <button type="button" onclick="playgame()">play</button></li>
-        <!-- Add more items -->
-    </ul>
+    <div class="container">
+        <ul class="scroll-list">
+            <li class="li">
+                <button class="button" type="button" onclick="playgame('alien_hominid')">alien hominid</button>
+            </li>
+            <li class="li">
+                <button class="button" type="button" onclick="playgame('btd5')">BTD5</button>
+            </li>
+        </ul>
+    </div>
 
 
     <script>
-        function playgame() {
-            window.location.href = "gameplayer.html"
+        function playgame(game) {
+            window.location.href = `gameplayer.html?game=${game}`;
         }
     </script>
 </body>

@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-    <link rel="stylesheet" href="style.css">
     <title>gameplayer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <embed
-            type="application/x-shockwave-flash"
-            src="alien_hominid.swf"
-    />
+    <div class="playergame">
+        <embed
+                id="playgame"
+                type="application/x-shockwave-flash"
+                src="alien_hominid.swf"
+                class="embed"
+        />
+    </div>
+    <script src="ruffle-nightly-2026_04_25-web-selfhosted/ruffle.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search)
+        const game = params.get('game')
+        let file = game + ".swf"
+        document.getElementById("playgame").src = file
+    </script>
 </body>
 </html>
